@@ -35,10 +35,25 @@ class Mammal : public Animal
 {
 private:
 	HairType hair;
+	int BirthYear;
 public:
 	Mammal(Sex s, int year) : Animal(s,year), hair(NORMAL) { } // Default hairtype is normal
 	Mammal(Sex s, int year, HairType h) : Animal(s,year), hair(h) { } // Otherwise, let them set the hairtype
 	int Speek();
+	int Age(int);
+};
+
+class Dragon : public Animal
+{
+private:
+	int BirthYear;
+public:
+	Dragon(Sex s, int year) : Animal(s, year){}
+	int Speak();
+	void BreathFire();
+	void WreakHavoc();
+	void Sleep();
+	int Age(int);
 };
 
 #endif
