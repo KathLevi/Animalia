@@ -56,4 +56,35 @@ public:
 	int Age(int);
 };
 
+class Human : public Mammal
+{
+private:
+	HairType hair;
+	int BirthYear;
+public:
+	Human(Sex s, int year) : Mammal (s,year), hair(NORMAL){}
+	Human(Sex s, int year, HairType h) : Mamal(s,year), hair(h){}
+	int Speak();
+	int Argue();
+	void Sleep();
+	void Thought();
+	void Eat();
+	int Age(int);
+};
+
+class PolarBear : public Mammal
+{
+private:
+	HairType hair;
+	int BirthYear;
+public:
+	PolarBear(Sex s, int year) : Mammal(s,year), hair(NORMAL){}
+	PolarBear(Sex s, int year, HairType h) : Mammal(s,year), hair(h) {}
+	int Speak();
+	void Sleep();
+	void Eat();
+	int Growl();
+	int Age(int);
+};
+
 #endif
